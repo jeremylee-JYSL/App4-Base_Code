@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Jeremy Lee
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -17,11 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+Determine if 
  
 Known Issues:
-blah, blah, blah, blah
-Ignore this error message if you see it using the javaScript console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
+N/A
 
 References:
 https://www.w3schools.com/w3css/default.asp
@@ -38,7 +37,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	//YOUR JAVASCRIPT GOES HERE
+	var allergy_count = 0;
+        var cold_count = 0;
+	var allergy_odds = 0;
+	var cold_odds = 0;
+
+
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+		//alert(allergy_count);
+        }//add count
+
+        function coldAdd(){
+            cold_count = cold_count + 1;
+        }//add count
+	
+	   function generateResults(){ /* created a generate result function to find percentages */
+        totalResponses = allergy_count + cold_count; /* this allows the total count of all the responses to be calculated based on the counts */
+               allergyPercent = (allergy_count / 6)*100; /* calculates precentage of allergy*/
+        coldPercent = (cold_count / 6)*100; /*Calculates precentage of cold */
+        document.getElementById("resultselement").innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
+    }
+
 
 </script>	
 
@@ -64,12 +84,135 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: 0vw;
     z-index: 1;
 }
+	
+img, object{ <img src="https://images.theabcdn.com/i/25849680" alt="Eddie Hall 500kg Deadlift" 
+            	max-height:90%;
+        		max-width:90%;
+        	}
+
 </style>
 
 <body>
 	
 	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
+	<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Cold or Allergies?</h1>
+</div>
 	
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<div class="page" id="one"> <!-- change page id for each page -->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Are your eyes watery or itchy?</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p> <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		</p>    <!-- change page ref for each -->
+		 </div><!-- q1,buttons --> 
+</div>
+
+<div class="page" id="two"> <!-- change page id for each page -->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Do you have a fever?</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+        <p> <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		</p>    <!-- change page ref for each -->
+		 </div><!-- q2,buttons --> 
+</div>	
+
+<div class="page" id="three"> <!-- change page id for each page -->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Do you have a sore throat?</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+        <p> <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		</p>    <!-- change page ref for each -->
+		 </div><!-- q3,buttons --> 
+</div>	
+
+<div class="page" id="four"> <!-- change page id for each page -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Are your symptoms seasonal or chronic?</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+        <p> <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		</p>    <!-- change page ref for each -->
+		 </div><!-- q4,buttons --> 
+</div>	
+	
+	
+<div class="page" id="five"> <!-- change page id for each page -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Is your skin itchy?</h1> <!-- created 5th question -->
+	</div>
+	
+	<div id="content" class="w3-container">
+        <p> <a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+		</p>    <!-- change page ref for each -->
+		 </div><!-- q4,buttons --> 
+</div>	
+	
+<div class="page" id="six"> <!-- change page id for each page -->
+	<div class="w3-container w3-flat-carrot">
+		<h1>Do you have aches and pains?</h1> <!-- created 6th question -->
+	</div>
+	
+	<div id="content" class="w3-container">
+        <p> <a href="#results1"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#results1"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		</p>    <!-- change page ref for each -->
+		 </div><!-- q4,buttons --> 
+</div>	
+	
+<!-- Results page -->
+    
+<div class="page" id="results1"> <!-- change page id for each page -->
+    <div class="w3-container w3-flat-carrot">
+        <h1>Results</h1>
+        
+    </div>
+
+    <div id="content" class="w3-container">
+    <a href = "#results2" onclick= "generateResults();" class="w3-btn w3-black"> Generate Results</a>
+    </div>
+    
+    <div class="w3-container w3-flat-carrot">
+        
+    </div>
+    
+    
+</div>
+    
+<div class="page" id="results2">
+    <div class="w3-container w3-flat-carrot">
+        <h1 >Here's what we found!</h1> 
+    </div>
+    
+    <div id="content" class="w3-container">
+        <p id = "resultselement">Your results</p> 
+    </div>
+</div>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+    <p>DIY!</p>
+</footer>
+
 </body>
 </html>
