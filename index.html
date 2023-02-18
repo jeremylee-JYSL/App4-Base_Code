@@ -17,7 +17,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-Determine if 
+Determine if you are more suited for a sumo or conventional deadlift stance.
  
 Known Issues:
 N/A
@@ -29,7 +29,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <head> 
 	<title>Hello World</title>  
-]	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="w3.css">
 	<link rel="stylesheet" href="w3-colors-flat.css">
@@ -54,8 +54,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	   function generateResults(){ /* created a generate result function to find percentages */
         totalResponses = sumo_count + conventional_count; /* this allows the total count of all the responses to be calculated based on the counts */
-               sumoPercent = (sumo_count / 6)*100; /* calculates precentage of sumo*/
-        conventionalPercent = (conventional_count / 6)*100; /*Calculates precentage of conventional */
+               sumoPercent = (sumo_count / 5)*100; /* calculates precentage of sumo*/
+        conventionalPercent = (conventional_count / 5)*100; /*Calculates precentage of conventional */
         document.getElementById("resultselement").innerHTML = "Probability you would do well with sumo =" + sumoPercent + "%" + "<br> Probability you would do well with conventional =" + conventionalPercent + "%";
     }
 
@@ -96,7 +96,7 @@ img, object{ <img src="https://images.theabcdn.com/i/25849680" alt="Eddie Hall 5
 	
 	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
 	<div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Conventional or Sumo?</h1>
 </div>
 	
 <div id="content" class="w3-container">
