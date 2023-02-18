@@ -37,26 +37,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	var allergy_count = 0;
-        var cold_count = 0;
-	var allergy_odds = 0;
-	var cold_odds = 0;
+	var sumo_count = 0;
+        var conventional_count = 0;
+	var sumo_odds = 0;
+	var conventional_odds = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        function SumoAdd(){
+            sumo_count = sumo_count + 1;
 		//alert(allergy_count);
         }//add count
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function ConventionalAdd(){
+            conventional_count = conventional_count + 1;
         }//add count
 	
 	   function generateResults(){ /* created a generate result function to find percentages */
-        totalResponses = allergy_count + cold_count; /* this allows the total count of all the responses to be calculated based on the counts */
-               allergyPercent = (allergy_count / 6)*100; /* calculates precentage of allergy*/
-        coldPercent = (cold_count / 6)*100; /*Calculates precentage of cold */
-        document.getElementById("resultselement").innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
+        totalResponses = sumo_count + conventional_count; /* this allows the total count of all the responses to be calculated based on the counts */
+               sumoPercent = (sumo_count / 6)*100; /* calculates precentage of sumo*/
+        conventionalPercent = (conventional_count / 6)*100; /*Calculates precentage of conventional */
+        document.getElementById("resultselement").innerHTML = "Probability you would do well with sumo =" + sumoPercent + "%" + "<br> Probability you would do well with conventional =" + conventionalPercent + "%";
     }
 
 
@@ -100,58 +100,58 @@ img, object{ <img src="https://images.theabcdn.com/i/25849680" alt="Eddie Hall 5
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>You want to deadlift but don't know which stance to choose? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p>THIS CODE SHOULD NOT BE USED AS PROFESSIONAL POWERLIFTING ADVICE.</p>
 
 <div class="page" id="one"> <!-- change page id for each page -->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Are your eyes watery or itchy?</h1>
+		<h1>Do you have a long torso?</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p> <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p> <a href="#two"  onclick="ConventionalAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#two"  onclick="SumoAdd();" class="w3-btn w3-black">No</a>
 		</p>    <!-- change page ref for each -->
 		 </div><!-- q1,buttons --> 
 </div>
 
 <div class="page" id="two"> <!-- change page id for each page -->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Do you have a fever?</h1>
+		<h1>Do you have long legs?</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-        <p> <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+        <p> <a href="#three"  onclick="SumoAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#three"  onclick="ConventionalAdd();" class="w3-btn w3-black">No</a>
 		</p>    <!-- change page ref for each -->
 		 </div><!-- q2,buttons --> 
 </div>	
 
 <div class="page" id="three"> <!-- change page id for each page -->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Do you have a sore throat?</h1>
+		<h1>Do you have a wide femur and hip angle?</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-        <p> <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+        <p> <a href="#four"  onclick="SumoAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#four"  onclick="ConventionalAdd();" class="w3-btn w3-black">No</a>
 		</p>    <!-- change page ref for each -->
 		 </div><!-- q3,buttons --> 
 </div>	
 
 <div class="page" id="four"> <!-- change page id for each page -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Are your symptoms seasonal or chronic?</h1>
+		<h1>Do you feel that your quads are stronger than your posterior chain?</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-        <p> <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p> <a href="#five"  onclick="SumoAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#five"  onclick="ConventionalAdd();" class="w3-btn w3-black">No</a>
 		</p>    <!-- change page ref for each -->
 		 </div><!-- q4,buttons --> 
 </div>	
@@ -159,27 +159,16 @@ img, object{ <img src="https://images.theabcdn.com/i/25849680" alt="Eddie Hall 5
 	
 <div class="page" id="five"> <!-- change page id for each page -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Is your skin itchy?</h1> <!-- created 5th question -->
+		<h1>Do you have limited hip mobility?</h1> <!-- created 5th question -->
 	</div>
 	
 	<div id="content" class="w3-container">
-        <p> <a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p> <a href="#results1"  onclick="ConventionalAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#results1"  onclick="SumoAdd();" class="w3-btn w3-black">No</a>
 		</p>    <!-- change page ref for each -->
 		 </div><!-- q4,buttons --> 
 </div>	
-	
-<div class="page" id="six"> <!-- change page id for each page -->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have aches and pains?</h1> <!-- created 6th question -->
-	</div>
-	
-	<div id="content" class="w3-container">
-        <p> <a href="#results1"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#results1"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-		</p>    <!-- change page ref for each -->
-		 </div><!-- q4,buttons --> 
-</div>	
+
 	
 <!-- Results page -->
     
